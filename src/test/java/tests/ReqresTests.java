@@ -1,9 +1,11 @@
 package tests;
 
 import config.UserConfig;
+import io.qameta.allure.Owner;
 import models.*;
 import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static io.qameta.allure.Allure.step;
@@ -11,7 +13,9 @@ import static io.restassured.RestAssured.given;
 import static org.assertj.core.api.Assertions.assertThat;
 import static specs.Specs.*;
 
+@Tag("API")
 @DisplayName("API tests for reqres.in")
+@Owner("lebedevich-es")
 public class ReqresTests {
 
     static UserConfig config = ConfigFactory.create(UserConfig.class, System.getProperties());
